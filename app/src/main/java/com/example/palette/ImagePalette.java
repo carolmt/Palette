@@ -5,6 +5,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +20,14 @@ public class ImagePalette extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Añadimos esta linea antes del setContentView
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         setContentView(R.layout.activity_image_palette);
+
+        // Indicar animación de entrada en este caso Fade
+        Fade explodeAnimation = new Fade();
+        explodeAnimation.setDuration(1000);
+        getWindow().setEnterTransition(explodeAnimation);
 
         ActionBar actionBar = getSupportActionBar();
         // Obtén la imagen seleccionada del Intent

@@ -51,6 +51,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="350dp"
+        android:transitionName="tranphoto"
         android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/lightVibrantTextView"
