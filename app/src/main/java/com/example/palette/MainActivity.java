@@ -1,9 +1,12 @@
 package com.example.palette;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.palette.graphics.Palette;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         items.add(new Tarjeta(R.drawable.image8));
 
         RecyclerView recView = findViewById(R.id.recview);
-
-        recView.setHasFixedSize(true);
+                recView.setHasFixedSize(true);
 
         CardsAdapter adaptador = new CardsAdapter(items);
         recView.setAdapter(adaptador);

@@ -52,7 +52,7 @@
                 public void onClick(View view) {
                     // Iniciar la actividad ImagePalette con la información necesaria
                     Intent intent = new Intent(context, ImagePalette.class);
-                    intent.putExtra("image_resource", item.getImagen());  // Pasa la información necesaria a ImagePalette
+                    intent.putExtra("selected_image", item.getImagen());  // Pasa la información necesaria a ImagePalette
                     context.startActivity(intent);
                 }
             });
